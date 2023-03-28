@@ -1,0 +1,11 @@
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student Management.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student Management.csproj.SuggestedBindingRedirects.cache
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student_Management.Form1.resources
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student_Management.Properties.Resources.resources
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student Management.csproj.GenerateResource.cache
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student Management.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\bin\Debug\Student Management.exe.config
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\bin\Debug\Student Management.exe
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\bin\Debug\Student Management.pdb
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student Management.exe
+D:\Microsoft Visual Studio\source\repos\StudentManagementWinForm\Student Management\Student Management\obj\Debug\Student Management.pdb
