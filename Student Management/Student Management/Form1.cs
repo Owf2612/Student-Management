@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,6 +22,32 @@ namespace Student_Management
         public frmMain()
         {
             InitializeComponent();
+            StyleDatagridView();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        void StyleDatagridView()
+        {
+            // Set up the DataGridView control
+            dataGridStudent.BorderStyle = BorderStyle.None;
+            dataGridStudent.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            dataGridStudent.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridStudent.DefaultCellStyle.SelectionBackColor = Color.FromArgb(67, 190, 105);
+            dataGridStudent.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            dataGridStudent.BackgroundColor = Color.FromArgb(30, 30, 30);
+            dataGridStudent.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing; //optional
+            dataGridStudent.EnableHeadersVisualStyles = false;
+            dataGridStudent.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridStudent.ColumnHeadersDefaultCellStyle.Font = new Font("MS Refernce Sans Serif", 10);
+            dataGridStudent.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(61, 61, 63);
+            dataGridStudent.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         public DataTable createTable()
@@ -64,6 +91,7 @@ namespace Student_Management
             btnSave.Enabled = true;
             btnExit.Enabled = true;
 
+            
             txtName.ReadOnly = false;
             txtAge.ReadOnly = false;
             txtClass.ReadOnly = false;
@@ -76,94 +104,46 @@ namespace Student_Management
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            
             LockControl();
             dtSV = createTable();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            UnlockControl();
-            flag = "add";
-
-            txtName.Text = "";
-            txtAge.Text = "";
-            txtClass.Text = "";
-            txtEmail.Text = "";
-            txtPersonID.Text = "";
-            txtStudentCode.Text = "";
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            UnlockControl();
-            flag = "edit";
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            int nextID = dtSV.Rows.Count + 1;
-
-            if (flag == "add")
-            {
-                if (CheckData())
-                {
-                    dtSV.Rows.Add(nextID, txtName.Text, txtPersonID.Text, txtStudentCode.Text, txtAge.Text, txtClass.Text, txtEmail.Text);
-                    dataGridStudent.DataSource = dtSV;
-                    dataGridStudent.RefreshEdit();
-                }
-            }
-            else if(flag == "edit")
-            {
-                if (CheckData())
-                {
-                    dtSV.Rows[index][1] = txtName.Text;
-                    dtSV.Rows[index][2] = txtPersonID.Text;
-                    dtSV.Rows[index][3] = txtStudentCode.Text;
-                    dtSV.Rows[index][4] = txtAge.Text;
-                    dtSV.Rows[index][5] = txtClass.Text;
-                    dtSV.Rows[index][6] = txtEmail.Text;
-                    dataGridStudent.DataSource = dtSV;
-                    dataGridStudent.RefreshEdit();
-                }
-            }
-            LockControl();
-        }
-
         public bool CheckData()
         {
-            if (string.IsNullOrEmpty(txtName.Text))
+            if (string.IsNullOrEmpty(txtName.Texts))
             {
-                MessageBox.Show("Ban chua nhap ten sinh vien", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have not entered your student name", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtName.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtAge.Text))
+            if (string.IsNullOrEmpty(txtAge.Texts))
             {
-                MessageBox.Show("Ban chua nhap tuoi sinh vien", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have not entered your student age", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtAge.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtClass.Text))
+            if (string.IsNullOrEmpty(txtClass.Texts))
             {
-                MessageBox.Show("Ban chua nhap lop sinh vien", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have not entered your student classs", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtClass.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtPersonID.Text))
+            if (string.IsNullOrEmpty(txtPersonID.Texts))
             {
-                MessageBox.Show("Ban chua nhap Person ID sinh vien", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have not entered your Person ID", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPersonID.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtStudentCode.Text))
+            if (string.IsNullOrEmpty(txtStudentCode.Texts))
             {
-                MessageBox.Show("Ban chua nhap ma sinh vien", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have not entered your student code", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtStudentCode.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtEmail.Text))
+            if (string.IsNullOrEmpty(txtEmail.Texts))
             {
-                MessageBox.Show("Ban chua nhap Email sinh vien", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("You have not entered your student email", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtEmail.Focus();
                 return false;
             }
@@ -176,28 +156,13 @@ namespace Student_Management
             DataTable dt = (DataTable)dataGridStudent.DataSource;
             if (dt.Rows != null || dt.Rows.Count > 0)
             {
-                txtName.Text = dataGridStudent.Rows[index].Cells[1].Value.ToString();
-                txtPersonID.Text = dataGridStudent.Rows[index].Cells[2].Value.ToString();
-                txtStudentCode.Text = dataGridStudent.Rows[index].Cells[3].Value.ToString();
-                txtAge.Text = dataGridStudent.Rows[index].Cells[4].Value.ToString();
-                txtClass.Text = dataGridStudent.Rows[index].Cells[5].Value.ToString();
-                txtEmail.Text = dataGridStudent.Rows[index].Cells[6].Value.ToString();
+                txtName.Texts = dataGridStudent.Rows[index].Cells[1].Value.ToString();
+                txtPersonID.Texts = dataGridStudent.Rows[index].Cells[2].Value.ToString();
+                txtStudentCode.Texts = dataGridStudent.Rows[index].Cells[3].Value.ToString();
+                txtAge.Texts = dataGridStudent.Rows[index].Cells[4].Value.ToString();
+                txtClass.Texts = dataGridStudent.Rows[index].Cells[5].Value.ToString();
+                txtEmail.Texts = dataGridStudent.Rows[index].Cells[6].Value.ToString();
             }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if(MessageBox.Show("Ban co uon xoa sinh vien nay?","Canh Bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {
-                dtSV.Rows.RemoveAt(index);
-                dataGridStudent.DataSource = dtSV;
-                dataGridStudent.RefreshEdit();
-            }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            Search(txtSearch.Text);
         }
 
         private void Search(string searchTerm)
@@ -237,5 +202,93 @@ namespace Student_Management
             }
         }
 
+        private void btnAdd_Click_1(object sender, EventArgs e)
+        {
+            UnlockControl();
+            flag = "add";
+
+            txtName.Texts = "";
+            txtAge.Texts = "";
+            txtClass.Texts = "";
+            txtEmail.Texts = "";
+            txtPersonID.Texts = "";
+            txtStudentCode.Texts = "";
+        }
+
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to delete this student?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                dtSV.Rows.RemoveAt(index);
+                dataGridStudent.DataSource = dtSV;
+                dataGridStudent.RefreshEdit();
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            UnlockControl();
+            flag = "edit";
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            int nextID = dtSV.Rows.Count + 1;
+
+            if (flag == "add")
+            {
+                if (CheckData())
+                {
+                    dtSV.Rows.Add(nextID, txtName.Texts, txtPersonID.Texts, txtStudentCode.Texts, txtAge.Texts, txtClass.Texts, txtEmail.Texts);
+                    dataGridStudent.DataSource = dtSV;
+                    dataGridStudent.RefreshEdit();
+                }
+            }
+            else if (flag == "edit")
+            {
+                if (CheckData())
+                {
+                    dtSV.Rows[index][1] = txtName.Texts;
+                    dtSV.Rows[index][2] = txtPersonID.Texts;
+                    dtSV.Rows[index][3] = txtStudentCode.Texts;
+                    dtSV.Rows[index][4] = txtAge.Texts;
+                    dtSV.Rows[index][5] = txtClass.Texts;
+                    dtSV.Rows[index][6] = txtEmail.Texts;
+                    dataGridStudent.DataSource = dtSV;
+                    dataGridStudent.RefreshEdit();
+                }
+            }
+            LockControl();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Search(txtSearch.Texts);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void bntMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
+

@@ -9,7 +9,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.ComponentModel;
 
-namespace studentmanagementlsitview.Constrols
+namespace Student_Management.owf
 {
     public class UIButton : Button
     {

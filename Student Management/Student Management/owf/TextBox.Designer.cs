@@ -1,4 +1,4 @@
-﻿namespace studentmanagementlsitview.Constrols
+﻿namespace Student_Management.owf
 {
     partial class TextBox
     {
@@ -35,14 +35,14 @@
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Location = new System.Drawing.Point(7, 7);
+            this.textBox1.Location = new System.Drawing.Point(10, 7);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 18);
+            this.textBox1.Size = new System.Drawing.Size(293, 18);
             this.textBox1.TabIndex = 0;
             this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter_1);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave_1);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
             this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
@@ -55,8 +55,8 @@
             this.ForeColor = System.Drawing.Color.DimGray;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "TextBox";
-            this.Padding = new System.Windows.Forms.Padding(7);
-            this.Size = new System.Drawing.Size(250, 30);
+            this.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.Size = new System.Drawing.Size(313, 38);
             this.ResumeLayout(false);
             this.PerformLayout();
 
