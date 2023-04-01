@@ -46,6 +46,13 @@
             this.colClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new Student_Management.owf.TextBox();
+            this.txtClass = new Student_Management.owf.TextBox();
+            this.txtAge = new Student_Management.owf.TextBox();
+            this.txtPersonID = new Student_Management.owf.TextBox();
+            this.txtStudentCode = new Student_Management.owf.TextBox();
+            this.txtEmail = new Student_Management.owf.TextBox();
+            this.txtName = new Student_Management.owf.TextBox();
             this.bntMinimize = new Student_Management.owf.UIButton();
             this.btnMaximize = new Student_Management.owf.UIButton();
             this.btnClose = new Student_Management.owf.UIButton();
@@ -55,19 +62,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtName = new Student_Management.owf.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new Student_Management.owf.UIButton();
             this.btnSua = new Student_Management.owf.UIButton();
             this.btnDelete = new Student_Management.owf.UIButton();
             this.btnAdd = new Student_Management.owf.UIButton();
-            this.txtEmail = new Student_Management.owf.TextBox();
-            this.txtStudentCode = new Student_Management.owf.TextBox();
-            this.txtPersonID = new Student_Management.owf.TextBox();
-            this.txtAge = new Student_Management.owf.TextBox();
-            this.txtClass = new Student_Management.owf.TextBox();
-            this.txtSearch = new Student_Management.owf.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -174,7 +174,7 @@
             this.dataGridStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridStudent.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridStudent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.dataGridStudent.ColumnHeadersHeight = 48;
             this.dataGridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
@@ -287,6 +287,174 @@
             this.panel1.TabIndex = 25;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtSearch.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtSearch.BorderRadius = 0;
+            this.txtSearch.BorderSize = 2;
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 8F);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.Location = new System.Drawing.Point(1206, 126);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Multiline = false;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtSearch.PasswordChar = false;
+            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtSearch.PlaceholderText = "Enter the name you want to search";
+            this.txtSearch.ReadOnly = false;
+            this.txtSearch.Size = new System.Drawing.Size(288, 34);
+            this.txtSearch.TabIndex = 35;
+            this.txtSearch.Texts = "";
+            this.txtSearch.UnderlinedStyle = true;
+            // 
+            // txtClass
+            // 
+            this.txtClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtClass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtClass.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtClass.BorderRadius = 0;
+            this.txtClass.BorderSize = 2;
+            this.txtClass.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtClass.ForeColor = System.Drawing.Color.White;
+            this.txtClass.Location = new System.Drawing.Point(990, 163);
+            this.txtClass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtClass.Multiline = false;
+            this.txtClass.Name = "txtClass";
+            this.txtClass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtClass.PasswordChar = false;
+            this.txtClass.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtClass.PlaceholderText = "";
+            this.txtClass.ReadOnly = false;
+            this.txtClass.Size = new System.Drawing.Size(155, 36);
+            this.txtClass.TabIndex = 34;
+            this.txtClass.Texts = "";
+            this.txtClass.UnderlinedStyle = true;
+            // 
+            // txtAge
+            // 
+            this.txtAge.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtAge.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtAge.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtAge.BorderRadius = 0;
+            this.txtAge.BorderSize = 2;
+            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.ForeColor = System.Drawing.Color.White;
+            this.txtAge.Location = new System.Drawing.Point(990, 60);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAge.Multiline = false;
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtAge.PasswordChar = false;
+            this.txtAge.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtAge.PlaceholderText = "";
+            this.txtAge.ReadOnly = false;
+            this.txtAge.Size = new System.Drawing.Size(155, 36);
+            this.txtAge.TabIndex = 33;
+            this.txtAge.Texts = "";
+            this.txtAge.UnderlinedStyle = true;
+            // 
+            // txtPersonID
+            // 
+            this.txtPersonID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtPersonID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtPersonID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtPersonID.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtPersonID.BorderRadius = 0;
+            this.txtPersonID.BorderSize = 2;
+            this.txtPersonID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonID.ForeColor = System.Drawing.Color.White;
+            this.txtPersonID.Location = new System.Drawing.Point(658, 163);
+            this.txtPersonID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPersonID.Multiline = false;
+            this.txtPersonID.Name = "txtPersonID";
+            this.txtPersonID.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtPersonID.PasswordChar = false;
+            this.txtPersonID.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtPersonID.PlaceholderText = "";
+            this.txtPersonID.ReadOnly = false;
+            this.txtPersonID.Size = new System.Drawing.Size(270, 36);
+            this.txtPersonID.TabIndex = 32;
+            this.txtPersonID.Texts = "";
+            this.txtPersonID.UnderlinedStyle = true;
+            // 
+            // txtStudentCode
+            // 
+            this.txtStudentCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtStudentCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtStudentCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtStudentCode.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtStudentCode.BorderRadius = 0;
+            this.txtStudentCode.BorderSize = 2;
+            this.txtStudentCode.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentCode.ForeColor = System.Drawing.Color.White;
+            this.txtStudentCode.Location = new System.Drawing.Point(658, 60);
+            this.txtStudentCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtStudentCode.Multiline = false;
+            this.txtStudentCode.Name = "txtStudentCode";
+            this.txtStudentCode.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtStudentCode.PasswordChar = false;
+            this.txtStudentCode.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtStudentCode.PlaceholderText = "";
+            this.txtStudentCode.ReadOnly = false;
+            this.txtStudentCode.Size = new System.Drawing.Size(270, 36);
+            this.txtStudentCode.TabIndex = 31;
+            this.txtStudentCode.Texts = "";
+            this.txtStudentCode.UnderlinedStyle = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtEmail.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtEmail.BorderRadius = 0;
+            this.txtEmail.BorderSize = 2;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(346, 163);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Multiline = false;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEmail.PasswordChar = false;
+            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.ReadOnly = false;
+            this.txtEmail.Size = new System.Drawing.Size(270, 36);
+            this.txtEmail.TabIndex = 30;
+            this.txtEmail.Texts = "";
+            this.txtEmail.UnderlinedStyle = true;
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
+            this.txtName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
+            this.txtName.BorderRadius = 0;
+            this.txtName.BorderSize = 2;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(346, 59);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtName.Multiline = false;
+            this.txtName.Name = "txtName";
+            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtName.PasswordChar = false;
+            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtName.PlaceholderText = "";
+            this.txtName.ReadOnly = false;
+            this.txtName.Size = new System.Drawing.Size(270, 36);
+            this.txtName.TabIndex = 26;
+            this.txtName.Texts = "";
+            this.txtName.UnderlinedStyle = true;
+            // 
             // bntMinimize
             // 
             this.bntMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -383,7 +551,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Student_Management.Properties.Resources.Logo_Truong_cao_dang_Quoc_te_BTEC_FPT;
             this.pictureBox1.Location = new System.Drawing.Point(12, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(268, 91);
@@ -424,30 +591,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1551, 733);
             this.panel3.TabIndex = 27;
-            // 
-            // txtName
-            // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtName.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtName.BorderRadius = 0;
-            this.txtName.BorderSize = 2;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(346, 59);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtName.Multiline = false;
-            this.txtName.Name = "txtName";
-            this.txtName.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtName.PasswordChar = false;
-            this.txtName.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtName.PlaceholderText = "";
-            this.txtName.ReadOnly = false;
-            this.txtName.Size = new System.Drawing.Size(270, 36);
-            this.txtName.TabIndex = 26;
-            this.txtName.Texts = "";
-            this.txtName.UnderlinedStyle = true;
             // 
             // btnExit
             // 
@@ -560,150 +703,6 @@
             this.btnAdd.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(241)))), ((int)(((byte)(134)))));
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtEmail.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtEmail.BorderRadius = 0;
-            this.txtEmail.BorderSize = 2;
-            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(346, 163);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Multiline = false;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEmail.PasswordChar = false;
-            this.txtEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.PlaceholderText = "";
-            this.txtEmail.ReadOnly = false;
-            this.txtEmail.Size = new System.Drawing.Size(270, 36);
-            this.txtEmail.TabIndex = 30;
-            this.txtEmail.Texts = "";
-            this.txtEmail.UnderlinedStyle = true;
-            // 
-            // txtStudentCode
-            // 
-            this.txtStudentCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtStudentCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtStudentCode.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtStudentCode.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtStudentCode.BorderRadius = 0;
-            this.txtStudentCode.BorderSize = 2;
-            this.txtStudentCode.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentCode.ForeColor = System.Drawing.Color.White;
-            this.txtStudentCode.Location = new System.Drawing.Point(658, 60);
-            this.txtStudentCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtStudentCode.Multiline = false;
-            this.txtStudentCode.Name = "txtStudentCode";
-            this.txtStudentCode.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtStudentCode.PasswordChar = false;
-            this.txtStudentCode.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtStudentCode.PlaceholderText = "";
-            this.txtStudentCode.ReadOnly = false;
-            this.txtStudentCode.Size = new System.Drawing.Size(270, 36);
-            this.txtStudentCode.TabIndex = 31;
-            this.txtStudentCode.Texts = "";
-            this.txtStudentCode.UnderlinedStyle = true;
-            // 
-            // txtPersonID
-            // 
-            this.txtPersonID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPersonID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtPersonID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtPersonID.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtPersonID.BorderRadius = 0;
-            this.txtPersonID.BorderSize = 2;
-            this.txtPersonID.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPersonID.ForeColor = System.Drawing.Color.White;
-            this.txtPersonID.Location = new System.Drawing.Point(658, 163);
-            this.txtPersonID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPersonID.Multiline = false;
-            this.txtPersonID.Name = "txtPersonID";
-            this.txtPersonID.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtPersonID.PasswordChar = false;
-            this.txtPersonID.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtPersonID.PlaceholderText = "";
-            this.txtPersonID.ReadOnly = false;
-            this.txtPersonID.Size = new System.Drawing.Size(270, 36);
-            this.txtPersonID.TabIndex = 32;
-            this.txtPersonID.Texts = "";
-            this.txtPersonID.UnderlinedStyle = true;
-            // 
-            // txtAge
-            // 
-            this.txtAge.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtAge.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtAge.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtAge.BorderRadius = 0;
-            this.txtAge.BorderSize = 2;
-            this.txtAge.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.ForeColor = System.Drawing.Color.White;
-            this.txtAge.Location = new System.Drawing.Point(990, 60);
-            this.txtAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAge.Multiline = false;
-            this.txtAge.Name = "txtAge";
-            this.txtAge.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtAge.PasswordChar = false;
-            this.txtAge.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtAge.PlaceholderText = "";
-            this.txtAge.ReadOnly = false;
-            this.txtAge.Size = new System.Drawing.Size(155, 36);
-            this.txtAge.TabIndex = 33;
-            this.txtAge.Texts = "";
-            this.txtAge.UnderlinedStyle = true;
-            // 
-            // txtClass
-            // 
-            this.txtClass.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtClass.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtClass.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtClass.BorderRadius = 0;
-            this.txtClass.BorderSize = 2;
-            this.txtClass.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtClass.ForeColor = System.Drawing.Color.White;
-            this.txtClass.Location = new System.Drawing.Point(990, 163);
-            this.txtClass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtClass.Multiline = false;
-            this.txtClass.Name = "txtClass";
-            this.txtClass.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtClass.PasswordChar = false;
-            this.txtClass.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtClass.PlaceholderText = "";
-            this.txtClass.ReadOnly = false;
-            this.txtClass.Size = new System.Drawing.Size(155, 36);
-            this.txtClass.TabIndex = 34;
-            this.txtClass.Texts = "";
-            this.txtClass.UnderlinedStyle = true;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(107)))), ((int)(((byte)(43)))));
-            this.txtSearch.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(242)))), ((int)(((byte)(79)))));
-            this.txtSearch.BorderRadius = 0;
-            this.txtSearch.BorderSize = 2;
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 8F);
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
-            this.txtSearch.Location = new System.Drawing.Point(1206, 126);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Multiline = false;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtSearch.PasswordChar = false;
-            this.txtSearch.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.PlaceholderText = "Enter the name you want to search";
-            this.txtSearch.ReadOnly = false;
-            this.txtSearch.Size = new System.Drawing.Size(288, 34);
-            this.txtSearch.TabIndex = 35;
-            this.txtSearch.Texts = "";
-            this.txtSearch.UnderlinedStyle = true;
             // 
             // frmMain
             // 
