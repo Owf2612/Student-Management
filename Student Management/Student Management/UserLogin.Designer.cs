@@ -70,11 +70,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(213)))), ((int)(((byte)(206)))));
-            this.label4.Location = new System.Drawing.Point(314, 0);
+            this.label4.Location = new System.Drawing.Point(320, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 32);
+            this.label4.Size = new System.Drawing.Size(28, 26);
             this.label4.TabIndex = 9;
             this.label4.Text = "X";
             this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label4_MouseDown);
