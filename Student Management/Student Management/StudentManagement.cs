@@ -183,6 +183,15 @@ namespace Student_Management
                     {
                         row.Selected = true;
                         found = true;
+
+                        // Update the textboxes with the values from the selected row
+                        txtName.Texts = row.Cells[1].Value.ToString();
+                        txtPersonID.Texts = row.Cells[2].Value.ToString();
+                        txtStudentCode.Texts = row.Cells[3].Value.ToString();
+                        txtAge.Texts = row.Cells[4].Value.ToString();
+                        txtClass.Texts = row.Cells[5].Value.ToString();
+                        txtEmail.Texts = row.Cells[6].Value.ToString();
+
                         break;
                     }
                 }
