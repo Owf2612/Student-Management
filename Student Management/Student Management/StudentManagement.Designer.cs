@@ -36,15 +36,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.dataGridStudent = new System.Windows.Forms.DataGridView();
-            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPersonID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStudentCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new Student_Management.owf.TextBox();
             this.txtClass = new Student_Management.owf.TextBox();
@@ -61,19 +52,28 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new Student_Management.owf.UIButton();
             this.btnSua = new Student_Management.owf.UIButton();
             this.btnDelete = new Student_Management.owf.UIButton();
             this.btnAdd = new Student_Management.owf.UIButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
+            this.dataGridStudent = new System.Windows.Forms.DataGridView();
+            this.colEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAge = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStudentCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPersonID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -159,104 +159,6 @@
             this.label9.Size = new System.Drawing.Size(148, 21);
             this.label9.TabIndex = 18;
             this.label9.Text = "Search By Name";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(0, 0);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 25;
-            // 
-            // dataGridStudent
-            // 
-            this.dataGridStudent.AllowUserToAddRows = false;
-            this.dataGridStudent.AllowUserToDeleteRows = false;
-            this.dataGridStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridStudent.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridStudent.ColumnHeadersHeight = 48;
-            this.dataGridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colID,
-            this.colName,
-            this.colPersonID,
-            this.colStudentCode,
-            this.colAge,
-            this.colClass,
-            this.colEmail});
-            this.dataGridStudent.Location = new System.Drawing.Point(316, 6);
-            this.dataGridStudent.Name = "dataGridStudent";
-            this.dataGridStudent.ReadOnly = true;
-            this.dataGridStudent.RowHeadersVisible = false;
-            this.dataGridStudent.RowHeadersWidth = 51;
-            this.dataGridStudent.RowTemplate.Height = 24;
-            this.dataGridStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridStudent.Size = new System.Drawing.Size(1611, 637);
-            this.dataGridStudent.TabIndex = 16;
-            this.dataGridStudent.SelectionChanged += new System.EventHandler(this.dataGridStudent_SelectionChanged);
-            // 
-            // colID
-            // 
-            this.colID.DataPropertyName = "ID";
-            this.colID.HeaderText = "ID";
-            this.colID.MinimumWidth = 6;
-            this.colID.Name = "colID";
-            this.colID.ReadOnly = true;
-            this.colID.Width = 125;
-            // 
-            // colName
-            // 
-            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colName.DataPropertyName = "Name";
-            this.colName.HeaderText = "Name";
-            this.colName.MinimumWidth = 6;
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            // 
-            // colPersonID
-            // 
-            this.colPersonID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colPersonID.DataPropertyName = "PersonID";
-            this.colPersonID.HeaderText = "Person ID";
-            this.colPersonID.MinimumWidth = 6;
-            this.colPersonID.Name = "colPersonID";
-            this.colPersonID.ReadOnly = true;
-            // 
-            // colStudentCode
-            // 
-            this.colStudentCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colStudentCode.DataPropertyName = "StudentCode";
-            this.colStudentCode.HeaderText = "Student Code";
-            this.colStudentCode.MinimumWidth = 6;
-            this.colStudentCode.Name = "colStudentCode";
-            this.colStudentCode.ReadOnly = true;
-            // 
-            // colAge
-            // 
-            this.colAge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAge.DataPropertyName = "Age";
-            this.colAge.HeaderText = "Age";
-            this.colAge.MinimumWidth = 6;
-            this.colAge.Name = "colAge";
-            this.colAge.ReadOnly = true;
-            // 
-            // colClass
-            // 
-            this.colClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colClass.DataPropertyName = "Class";
-            this.colClass.HeaderText = "Class";
-            this.colClass.MinimumWidth = 6;
-            this.colClass.Name = "colClass";
-            this.colClass.ReadOnly = true;
-            // 
-            // colEmail
-            // 
-            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colEmail.DataPropertyName = "Email";
-            this.colEmail.HeaderText = "Email";
-            this.colEmail.MinimumWidth = 6;
-            this.colEmail.Name = "colEmail";
-            this.colEmail.ReadOnly = true;
             // 
             // panel1
             // 
@@ -582,25 +484,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "welcome to ";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.panel3.Controls.Add(this.dataGridStudent);
-            this.panel3.Controls.Add(this.btnExit);
-            this.panel3.Controls.Add(this.btnEdit);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 261);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1939, 655);
-            this.panel3.TabIndex = 27;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Location = new System.Drawing.Point(0, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
-            this.btnExit.TabIndex = 17;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(74)))));
@@ -706,6 +589,123 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
+            // dataGridStudent
+            // 
+            this.dataGridStudent.AllowUserToAddRows = false;
+            this.dataGridStudent.AllowUserToDeleteRows = false;
+            this.dataGridStudent.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridStudent.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridStudent.ColumnHeadersHeight = 48;
+            this.dataGridStudent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colID,
+            this.colName,
+            this.colPersonID,
+            this.colStudentCode,
+            this.colAge,
+            this.colClass,
+            this.colEmail});
+            this.dataGridStudent.Location = new System.Drawing.Point(316, 6);
+            this.dataGridStudent.Name = "dataGridStudent";
+            this.dataGridStudent.ReadOnly = true;
+            this.dataGridStudent.RowHeadersVisible = false;
+            this.dataGridStudent.RowHeadersWidth = 51;
+            this.dataGridStudent.RowTemplate.Height = 24;
+            this.dataGridStudent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridStudent.Size = new System.Drawing.Size(1611, 637);
+            this.dataGridStudent.TabIndex = 16;
+            this.dataGridStudent.SelectionChanged += new System.EventHandler(this.dataGridStudent_SelectionChanged);
+            // 
+            // colEmail
+            // 
+            this.colEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colEmail.DataPropertyName = "Email";
+            this.colEmail.HeaderText = "Email";
+            this.colEmail.MinimumWidth = 6;
+            this.colEmail.Name = "colEmail";
+            this.colEmail.ReadOnly = true;
+            // 
+            // colClass
+            // 
+            this.colClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colClass.DataPropertyName = "Class";
+            this.colClass.HeaderText = "Class";
+            this.colClass.MinimumWidth = 6;
+            this.colClass.Name = "colClass";
+            this.colClass.ReadOnly = true;
+            // 
+            // colAge
+            // 
+            this.colAge.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colAge.DataPropertyName = "Age";
+            this.colAge.HeaderText = "Age";
+            this.colAge.MinimumWidth = 6;
+            this.colAge.Name = "colAge";
+            this.colAge.ReadOnly = true;
+            // 
+            // colStudentCode
+            // 
+            this.colStudentCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colStudentCode.DataPropertyName = "StudentCode";
+            this.colStudentCode.HeaderText = "Student Code";
+            this.colStudentCode.MinimumWidth = 6;
+            this.colStudentCode.Name = "colStudentCode";
+            this.colStudentCode.ReadOnly = true;
+            // 
+            // colPersonID
+            // 
+            this.colPersonID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colPersonID.DataPropertyName = "PersonID";
+            this.colPersonID.HeaderText = "Person ID";
+            this.colPersonID.MinimumWidth = 6;
+            this.colPersonID.Name = "colPersonID";
+            this.colPersonID.ReadOnly = true;
+            // 
+            // colName
+            // 
+            this.colName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "Name";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colID
+            // 
+            this.colID.DataPropertyName = "ID";
+            this.colID.HeaderText = "ID";
+            this.colID.MinimumWidth = 6;
+            this.colID.Name = "colID";
+            this.colID.ReadOnly = true;
+            this.colID.Width = 125;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.panel3.Controls.Add(this.dataGridStudent);
+            this.panel3.Controls.Add(this.btnExit);
+            this.panel3.Controls.Add(this.btnEdit);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 261);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1939, 655);
+            this.panel3.TabIndex = 27;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(0, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 17;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(0, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 25;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -718,15 +718,16 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.Text = "Students Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridStudent)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -739,11 +740,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.DataGridView dataGridStudent;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel2;
         private owf.UIButton btnAdd;
         private owf.UIButton btnDelete;
@@ -757,13 +754,6 @@
         private owf.UIButton bntMinimize;
         private owf.UIButton btnMaximize;
         private owf.UIButton btnClose;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPersonID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStudentCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colClass;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
         private owf.TextBox txtName;
         private owf.TextBox txtEmail;
         private owf.TextBox txtPersonID;
@@ -771,6 +761,17 @@
         private owf.TextBox txtSearch;
         private owf.TextBox txtClass;
         private owf.TextBox txtAge;
+        private System.Windows.Forms.DataGridView dataGridStudent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPersonID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStudentCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAge;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colClass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmail;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
 
